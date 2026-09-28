@@ -38,7 +38,7 @@ function pattern1(n) {
 
 // 4. feladat
 function pattern3(n) {
-        for (let i = 1; i <= n; i++){
+    for (let i = 1; i <= n; i++){
         console.log(" ".repeat(n - i) + (i != 0 ? "* ".repeat(i) : ""));
     }
 }
