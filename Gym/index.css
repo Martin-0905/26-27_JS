@@ -1,0 +1,118 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(170, 170, 170);
+    --secondary-color: rgb(160,160,160);
+    background-image:
+        linear-gradient(45deg, transparent 48%, var(--secondary-color) 49%, var(--secondary-color) 51%, transparent 52%),
+        linear-gradient(-45deg, transparent 48%, var(--secondary-color) 49%, var(--secondary-color) 51%, transparent 52%);
+    background-position: center;
+    background-size: 25px 25px, 25px 25px;
+}
+.main{
+    padding: 15px;
+
+}
+table {
+    margin-top: 15px;
+    border-collapse: collapse;
+    background-color: white;
+}
+td{
+    border: 1px solid black;
+}
+input[type="text"] {
+    border: none;
+    field-sizing: content;
+    min-width: 100px;
+    width: auto;
+    padding: 5px;
+}
+input[type="text"]:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: inherit;
+}
+input[type="file"]::file-selector-button, #saveBtn {
+    background-color: rgb(70, 90, 170);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+input[type="file"]::file-selector-button:hover, #saveBtn:hover {
+    background-color: rgb(100, 125, 220);
+}
+.stylingButton{
+    width: 75px;
+    background-color: royalblue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+#loadsave{
+    margin-bottom: 10px;
+}
+input[type="color"]{
+    width: 50px;
+    height: 23px;
+    border: none;
+}
+input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+input[type="color"]::-webkit-color-swatch {
+    border: none;
+    border-radius: 0;
+}
+td input[type="text"] {
+    color: inherit;
+    width: 100%;
+    height: 100%;
+}
+.workspace {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+#toolbar {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    position: sticky;
+    top: 15px;
+    align-self: flex-start;
+
+    min-width: 130px;
+    padding: 10px;
+    z-index: 100;
+}
+#toolbar label {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+#toolbar.stuck {
+    background-color: var(--primary-color);
+    background-image: var(--background-pattern);
+    background-size: 25px 25px;
+}
+#myTable.column-edge, #myTable.column-edge * {
+    cursor: col-resize !important;
+}
+
+#myTable.row-edge, #myTable.row-edge * {
+    cursor: row-resize !important;
+}
+.selected-cell{
+    outline: 2px solid royalblue;
+}

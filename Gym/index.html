@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spreadsheet thing</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <div class="main">
+        <div id="loadsave">
+            <input type="file" id="jsonFile" accept=".json">
+            <button type="button" id="saveBtn">Save Table</button>
+        </div>
+    
+        <div class="workspace">
+            <div id="toolbar">
+                <button type="button" class="stylingButton" id="deleteRowBtn">Delete Row</button>
+                <button type="button" class="stylingButton" id="deleteColBtn">Delete Column</button>
+                <button type="button" class="stylingButton" id="undoBtn">Undo</button>
+                <button type="button" class="stylingButton" id="boldBtn"><b>Bold</b></button>
+                <button type="button" class="stylingButton" id="italicBtn"><i>Italic</i></button>
+            
+                <label>
+                    Background:
+                    <input type="color" id="bgColor" value="#ffffff">
+                </label>
+            
+                <label>
+                    Text:
+                    <input type="color" id="textColor" value="#000000">
+                </label>
+            </div>
+        
+            <table id="myTable"></table>
+        </div>
+    </div>
+</body>
+</html>
