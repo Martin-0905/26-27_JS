@@ -309,7 +309,6 @@ const undoStack = [];
 function saveUndoState() {
     const copy = myTable.cloneNode(true);
 
-    // Preserve currently edited input values
     const originals = myTable.querySelectorAll('input[type="text"]');
     const inputs = copy.querySelectorAll('input[type="text"]');
 
@@ -317,14 +316,12 @@ function saveUndoState() {
         input.setAttribute("value", originals[i].value);
     });
 
-    // Don't save the selection highlight
     copy.querySelectorAll(".selected-cell").forEach(cell => {
         cell.classList.remove("selected-cell");
     });
 
     undoStack.push(copy.innerHTML);
 
-    // Keep only the latest 50 states
     if (undoStack.length > 50) {
         undoStack.shift();
     }
